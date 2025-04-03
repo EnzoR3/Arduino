@@ -1,4 +1,4 @@
-
+// ultrasound
 const int trigPin = 13;
 const int echoPin = 5;
 
@@ -31,3 +31,28 @@ void loop () {
 }
 
 
+// servo
+
+#include <Servo.h>
+// Importeer de Servo bibliotheek om de servo aan te sturen
+Servo servo;
+
+int pos = 0;
+
+void setup(){
+ servo.attach(8);
+ servo.write(0);
+ delay(40);
+}
+void loop() {
+
+ for (pos = 0; pos <= 180; pos++ {
+  servo.write(pos); // Geef de positie aan de servo door
+  delay(10);
+ }
+
+ for (pos = 180; pos >= 0; pos--) {
+   servo.write(pos); // Geef de positie aan de servo door
+   delay(10);
+ }
+}
