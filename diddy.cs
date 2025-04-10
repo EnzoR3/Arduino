@@ -31,8 +31,6 @@ void loop () {
 }
 
 
-// servo
-
 #include <Servo.h>
 // Importeer de Servo bibliotheek om de servo aan te sturen
 Servo servo;
@@ -46,7 +44,7 @@ void setup(){
 }
 void loop() {
 
- for (pos = 0; pos <= 180; pos++ {
+ for (pos = 0; pos <= 180; pos++) {
   servo.write(pos); // Geef de positie aan de servo door
   delay(10);
  }
